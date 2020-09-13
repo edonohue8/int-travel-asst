@@ -12,9 +12,9 @@ SO THAT I can make an informed decision on whether to travel to various destinat
 
 GIVEN I am looking for information on international travel locations
 
-WHEN I enter an origin, destination, return location, and travel dates
+WHEN I enter an origin, a destination, and travel dates
 
-THEN I am shown relevant flight information using the entered criteria, travel advisory information for the selected destination and return location, and recent news for the selected destination and return location.
+THEN I am shown relevant flight information using the entered criteria, travel advisory information for the selected destination, and recent news for the selected destination.
 
 WHEN I 
 
