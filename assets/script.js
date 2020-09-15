@@ -15,3 +15,9 @@ var settings = {
 $.ajax(settings).done(function (response) {
 	console.log(response);
 });
+
+//travel advisory apikey
+//"https://www.travel-advisory.info/api?countrycode=" + twoLetterCountryCode
+
+//website with two-letter country codes
+//https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#Officially_assigned_code_elements
