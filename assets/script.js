@@ -21,3 +21,10 @@ $.ajax(settings).done(function (response) {
 
 //website with two-letter country codes
 //https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#Officially_assigned_code_elements
+
+
+//news apikey
+//6324f13fa0a84aac8d7eab29aa0fed5f
+
+//call newsapi for all articles mentioning apple from yesterday, sorted by popular publishers first
+//http://newsapi.org/v2/everything?q=apple&from=2020-09-14&to=2020-09-14&sortBy=popularity&apiKey=6324f13fa0a84aac8d7eab29aa0fed5f
