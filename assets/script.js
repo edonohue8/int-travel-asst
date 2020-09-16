@@ -28,20 +28,17 @@ console.log(response);
 
 console.log(countryName);
 
+//console.log(isoCountries.countryName);
+
 //create array of all full country names and all 2-letter country codes to perform a find and replace
 //search the array for the country name and replace it with the corresponding country code
 //then enter the country code into the travel advisory apikey
 
 
-
     });
 
-    
 //travel advisory apikey
 //"https://www.travel-advisory.info/api?countrycode=" + twoLetterCountryCode
-
-//website with two-letter country codes
-//https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#Officially_assigned_code_elements
 
 
 //news apikey
