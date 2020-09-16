@@ -79,7 +79,7 @@ var isoCountries = {
     'Gabon': 'GA',
     'Gambia': 'GM',
     'Georgia': 'GE',
-    'Germany': 'DE',
+    Germany: 'DE',
     'Ghana': 'GH',
     'Gibraltar': 'GI',
     'Greece': 'GR',
