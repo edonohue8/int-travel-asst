@@ -34,8 +34,9 @@ console.log(countryName);
 
 //console.log(isoCountries.countryName);
 
-var twoLetterCountryCode = $("").val();
-var travelAdvisoryURL = "https://www.travel-advisory.info/api?countrycode=" + twoLetterCountryCode;
+// var twoLetterCountryCode = $("").val();
+var travelAdvisoryURL = "https://www.travel-advisory.info/api?countrycode=DE";
+// + twoLetterCountryCode;
 
 $.ajax({
     url: travelAdvisoryURL,
