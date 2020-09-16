@@ -5,8 +5,10 @@ $("#search-btn").on("click", function () {
     // var usersSearch = $("#users-search").val();
     var departureDate = $("#departure").val();
     var returningDate = $("#returning").val();
-    var originLocation = $("#origin").val();
-    var destinationLocation = $("#dest-location").val();
+    var originLocation = $("#origin").val().trim();
+console.log(originLocation);
+    var destinationLocation = $("#dest-location").val().trim();
+console.log(destinationLocation);
 
 
     var settings = {
