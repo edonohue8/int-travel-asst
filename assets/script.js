@@ -9,9 +9,9 @@ $("#search-btn").on("click", function () {
     var departureDate = $("#departure").val();
     var returningDate = $("#returning").val();
     var originLocation = $("#origin").val().trim();
-console.log(originLocation);
+    console.log(originLocation);
     var destinationLocation = $("#dest-location").val().trim();
-console.log(destinationLocation);
+    console.log(destinationLocation);
 
     var settings = {
         "async": true,
@@ -23,58 +23,59 @@ console.log(destinationLocation);
             "x-rapidapi-key": "9882b1ec54msh8033abef1236139p18bf7djsn6df691b59287"
         }
     }
-    
+
     $.ajax(settings).done(function (response) {
 
-console.log(response);
-        
+        console.log(response);
+
         var countryName = (response.Places[1].CountryName);
 
-console.log(countryName);
+        console.log(countryName);
 
-//console.log(isoCountries.countryName);
+//to retrieve the 2-letter country code from the list
+        console.log(isoCountries[countryName]);
+        let twoLetterCountryCode = isoCountries[countryName]
 
-// var twoLetterCountryCode = $("").val();
-var travelAdvisoryURL = "https://www.travel-advisory.info/api?countrycode=DE";
-// + twoLetterCountryCode;
+        // var twoLetterCountryCode = $("").val();
+        var travelAdvisoryURL = "https://www.travel-advisory.info/api?countrycode=" + twoLetterCountryCode;
 
-$.ajax({
-    url: travelAdvisoryURL,
-    method: "GET"
-  })
+        $.ajax({
+            url: travelAdvisoryURL,
+            method: "GET"
+        })
 
-  .then(function(response) {
+            .then(function (response) {
 
-    // Log the travelAdvisoryURL
-    console.log(travelAdvisoryURL);
+                // Log the travelAdvisoryURL
+                console.log(travelAdvisoryURL);
 
-    // Log the resulting object
-    console.log(response);
+                // Log the resulting object
+                console.log(response);
 
-  });
+            });
 
-//create array of all full country names and all 2-letter country codes to perform a find and replace
-//search the array for the country name and replace it with the corresponding country code
-//then enter the country code into the travel advisory apikey
+        //create array of all full country names and all 2-letter country codes to perform a find and replace
+        //search the array for the country name and replace it with the corresponding country code
+        //then enter the country code into the travel advisory apikey
 
 
     });
 
-//travel advisory apikey
+    //travel advisory apikey
 
-// "https://www.travel-advisory.info/api?countrycode=" + twoLetterCountryCode
+    // "https://www.travel-advisory.info/api?countrycode=" + twoLetterCountryCode
 
-//Levels
-//1 Exercise normal precautions (dark blue)
-//2 Exercise increased caution (yellow)
-//3 Reconsider travel (orange)
-//4 Do not travel (red)
+    //Levels
+    //1 Exercise normal precautions (dark blue)
+    //2 Exercise increased caution (yellow)
+    //3 Reconsider travel (orange)
+    //4 Do not travel (red)
 
-//news apikey
-//6324f13fa0a84aac8d7eab29aa0fed5f
+    //news apikey
+    //6324f13fa0a84aac8d7eab29aa0fed5f
 
-//example of newsapi call for all articles mentioning apple from yesterday, sorted by popular publishers first
-//date format is YYYY-MM-DD (e.g. 2020-09-15)
-//http://newsapi.org/v2/everything?q=" + countryName + "&from=" + oneMonthAgo + "to=" nowMoment + "&sortBy=popularity&apiKey=6324f13fa0a84aac8d7eab29aa0fed5f"
+    //example of newsapi call for all articles mentioning apple from yesterday, sorted by popular publishers first
+    //date format is YYYY-MM-DD (e.g. 2020-09-15)
+    //http://newsapi.org/v2/everything?q=" + countryName + "&from=" + oneMonthAgo + "to=" nowMoment + "&sortBy=popularity&apiKey=6324f13fa0a84aac8d7eab29aa0fed5f"
 
 });
