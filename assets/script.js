@@ -44,6 +44,11 @@ console.log(countryName);
 //travel advisory apikey
 //"https://www.travel-advisory.info/api?countrycode=" + twoLetterCountryCode
 
+//Levels
+//1 Execrcise normal precautions (dark blue)
+//2 Exercise increased caution (yellow)
+//3 Reconsider travel (orange)
+//4 Do not travel (red)
 
 //news apikey
 //6324f13fa0a84aac8d7eab29aa0fed5f
