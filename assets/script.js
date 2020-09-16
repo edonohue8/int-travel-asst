@@ -1,13 +1,17 @@
+//obtain current date
+var nowMoment = moment();
+var eDisplayMoment = document.getElementById('currentDay');
+console.log(nowMoment);
+
 //Search buttons
-
-
 $("#search-btn").on("click", function () {
     // var usersSearch = $("#users-search").val();
     var departureDate = $("#departure").val();
     var returningDate = $("#returning").val();
-    var originLocation = $("#origin").val();
-    var destinationLocation = $("#dest-location").val();
-
+    var originLocation = $("#origin").val().trim();
+console.log(originLocation);
+    var destinationLocation = $("#dest-location").val().trim();
+console.log(destinationLocation);
 
     var settings = {
         "async": true,
@@ -40,11 +44,17 @@ console.log(countryName);
 //travel advisory apikey
 //"https://www.travel-advisory.info/api?countrycode=" + twoLetterCountryCode
 
+//Levels
+//1 Execrcise normal precautions (dark blue)
+//2 Exercise increased caution (yellow)
+//3 Reconsider travel (orange)
+//4 Do not travel (red)
 
 //news apikey
 //6324f13fa0a84aac8d7eab29aa0fed5f
 
 //example of newsapi call for all articles mentioning apple from yesterday, sorted by popular publishers first
-//http://newsapi.org/v2/everything?q=apple&from=2020-09-14&to=2020-09-14&sortBy=popularity&apiKey=6324f13fa0a84aac8d7eab29aa0fed5f
+
+//http://newsapi.org/v2/everything?q=" + countryName + "&from=" + oneMonthAgo + "to=" nowMoment + "&sortBy=popularity&apiKey=6324f13fa0a84aac8d7eab29aa0fed5f"
 
 });
