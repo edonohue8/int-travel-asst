@@ -1,6 +1,9 @@
+//obtain current date
+var nowMoment = moment();
+var eDisplayMoment = document.getElementById('currentDay');
+console.log(nowMoment);
+
 //Search buttons
-
-
 $("#search-btn").on("click", function () {
     // var usersSearch = $("#users-search").val();
     var departureDate = $("#departure").val();
@@ -9,7 +12,6 @@ $("#search-btn").on("click", function () {
 console.log(originLocation);
     var destinationLocation = $("#dest-location").val().trim();
 console.log(destinationLocation);
-
 
     var settings = {
         "async": true,
@@ -47,6 +49,7 @@ console.log(countryName);
 //6324f13fa0a84aac8d7eab29aa0fed5f
 
 //example of newsapi call for all articles mentioning apple from yesterday, sorted by popular publishers first
-//http://newsapi.org/v2/everything?q=apple&from=2020-09-14&to=2020-09-14&sortBy=popularity&apiKey=6324f13fa0a84aac8d7eab29aa0fed5f
+
+//http://newsapi.org/v2/everything?q=" + countryName + "&from=" + oneMonthAgo + "to=" nowMoment + "&sortBy=popularity&apiKey=6324f13fa0a84aac8d7eab29aa0fed5f"
 
 });
