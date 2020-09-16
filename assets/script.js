@@ -54,7 +54,7 @@ console.log(countryName);
 //6324f13fa0a84aac8d7eab29aa0fed5f
 
 //example of newsapi call for all articles mentioning apple from yesterday, sorted by popular publishers first
-
+//date format is YYYY-MM-DD (e.g. 2020-09-15)
 //http://newsapi.org/v2/everything?q=" + countryName + "&from=" + oneMonthAgo + "to=" nowMoment + "&sortBy=popularity&apiKey=6324f13fa0a84aac8d7eab29aa0fed5f"
 
 });
