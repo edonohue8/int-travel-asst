@@ -34,6 +34,24 @@ console.log(countryName);
 
 //console.log(isoCountries.countryName);
 
+var twoLetterCountryCode = $("").val();
+var travelAdvisoryURL = "https://www.travel-advisory.info/api?countrycode=" + twoLetterCountryCode;
+
+$.ajax({
+    url: travelAdvisoryURL,
+    method: "GET"
+  })
+
+  .then(function(response) {
+
+    // Log the travelAdvisoryURL
+    console.log(travelAdvisoryURL);
+
+    // Log the resulting object
+    console.log(response);
+
+  });
+
 //create array of all full country names and all 2-letter country codes to perform a find and replace
 //search the array for the country name and replace it with the corresponding country code
 //then enter the country code into the travel advisory apikey
@@ -42,7 +60,8 @@ console.log(countryName);
     });
 
 //travel advisory apikey
-//"https://www.travel-advisory.info/api?countrycode=" + twoLetterCountryCode
+
+// "https://www.travel-advisory.info/api?countrycode=" + twoLetterCountryCode
 
 //Levels
 //1 Execrcise normal precautions (dark blue)
