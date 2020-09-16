@@ -45,7 +45,7 @@ console.log(countryName);
 //"https://www.travel-advisory.info/api?countrycode=" + twoLetterCountryCode
 
 //Levels
-//1 Execrcise normal precautions (dark blue)
+//1 Exercise normal precautions (dark blue)
 //2 Exercise increased caution (yellow)
 //3 Reconsider travel (orange)
 //4 Do not travel (red)
