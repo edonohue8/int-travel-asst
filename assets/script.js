@@ -1,7 +1,6 @@
 //obtain current date
-var nowMoment = moment();
-var eDisplayMoment = document.getElementById('currentDay');
-console.log(nowMoment);
+var currentDay = moment().format('YYYY-MM-DD');
+console.log(currentDay);
 
 //search buttons
 $("#search-btn").on("click", function () {
@@ -33,7 +32,8 @@ console.log(response);
 
 console.log(countryName);
 
-//retrieve the 2-letter country code from the list
+
+    //retrieve the 2-letter country code from the list
 console.log(isoCountries[countryName]);
 
         let twoLetterCountryCode = isoCountries[countryName]
@@ -56,27 +56,19 @@ console.log(response);
             });
 
 //Travel Advisory Levels
-//1 Exercise normal precautions (dark blue)
-//2 Exercise increased caution (yellow)
-//3 Reconsider travel (orange)
-//4 Do not travel (red)
+//  1 Exercise normal precautions (dark blue)
+//  2 Exercise increased caution (yellow)
+//  3 Reconsider travel (orange)
+//  4 Do not travel (red)
 
+    const newsApiKey = "2941a03c379bfc4593a62285a938be82"
 
-var newsApiURL = "http://newsapi.org/v2/everything?q=" + countryName + "&from=" + oneMonthAgo + "to=" + nowMoment + "&sortBy=popularity&apiKey=6324f13fa0a84aac8d7eab29aa0fed5f";
-
-        $.ajax({
-            url: newsApiURL,
-            method: "GET"
-        })
-
+    fetch("https://gnews.io/api/v4/search?q=" + countryName + "&lang=en&sortby=relevance&token=" + newsApiKey)
         .then(function (response) {
-
-// Log the travelAdvisoryURL
-console.log(newsApiURL);
-
-// Log the resulting object
-console.log(response);
-
+            return response.json();
+        })
+        .then(function (data) {
+            console.log(data);
         });
     });
 });
