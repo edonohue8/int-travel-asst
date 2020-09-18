@@ -66,3 +66,11 @@ var originAirports = {
     'Washington DC - National': 'DCA',
     'West Palm Beach, FL': 'PBI',
 }
+
+var airportList = Object.keys(originAirports);
+
+//  Receives input after each onkeydown or onkeyup
+//  Put that input through the airportList array and if the input matches starting at index 0
+//  For each match, using something like indexOf, then you add the entire string to a separate array
+//  Once you've iterated through the airportList, use that array to construct your dropdown
+//  Clear the previous dropdown and then create the new dropdown
