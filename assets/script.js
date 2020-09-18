@@ -96,8 +96,8 @@ console.log(data);
         });
 console.log(response);
 
-console.log(Object.keys(originAiport)[0]);
-console.log(Object.values(originAiport)[0]);
+console.log(Object.keys(originAirport)[0]);
+console.log(Object.values(originAirport)[0]);
 
 console.log(Object.keys(isoCountries)[0]);
 console.log(Object.values(isoCountries)[0]);
