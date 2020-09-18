@@ -1,4 +1,4 @@
-var destinationAirports = {
+const destinationAirport = {
 "Calgary, AB, Canada" : "YYC",
 "Edmonton, AB, Canada" : "YEG",
 "Gander, NL, Canada" : "YQX",
