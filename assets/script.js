@@ -25,8 +25,14 @@ $("#search-btn").on("click", function () {
     var departureDate = $("#departure").val();
     var returningDate = $("#returning").val();
     var originLocation = $("#origin").val().trim();
+    
+    originLocation = window.airports[originLocation]
+    console.log("ORIGIN IS ", originLocation)
+
     console.log(originLocation);
     var destinationLocation = $("#dest-location").val().trim();
+    destinationLocation = window.dairports[destinationLocation]
+    console.log("DESTINATION IS ", destinationLocation)
     console.log(destinationLocation);
 
     console.log(departureDate);
@@ -44,11 +50,12 @@ $("#search-btn").on("click", function () {
     // notes: getJSON not connecting with JQuery script
     // notes: url needs to be connected to JSON file
     // notes: entry needs to be corrected to pull from originAirports list also
+    /* 
     $.getJSON(url, function (data) {
         $.each(data, function (key, entry) {
             dropdown.append($('<option></option>').attr('value', entry.airport).text(entry.name));
         })
-    });
+    });*/
 
     //skyscanner api call code
     settings = {
@@ -69,7 +76,7 @@ $("#search-btn").on("click", function () {
         //if response contains no data, display "No flights between origin and destination"
 
 
-        countryName = (response.Places[1].CountryName);
+        countryName = (response.Places[0].CountryName);
 
         console.log(countryName);
 
@@ -123,6 +130,7 @@ $("#search-btn").on("click", function () {
             .then(function (data) {
                 console.log(data);
             });
+            /*
         console.log(response);
 
         console.log(Object.keys(originAirport)[0]);
@@ -132,7 +140,22 @@ $("#search-btn").on("click", function () {
         console.log(Object.values(isoCountries)[0]);
 
         console.log(Object.keys(destinationAirport)[0]);
-        console.log(Object.values(destinationAirport)[0]);
+        console.log(Object.values(destinationAirport)[0]);*/
 
     });
 });
+
+
+window.onload = function(){
+    console.log("list of objects is", window.airports)
+    for(let airport in window.airports){
+        console.log(` ${airport} ==> ${airports[airport]}`)
+        $('#origins').append(`<option value="${airport}">`)
+       
+    } 
+ 
+    for(let dairport in window.dairports){
+        $('#destinations').append(`<option value="${dairport}">`)
+    }
+    //$('#origins')
+}

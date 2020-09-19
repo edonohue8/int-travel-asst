@@ -1,4 +1,4 @@
-const destinationAirport = {
+window.dairports = {
 "Abidjan, Cote d'Ivoire" : "ABJ",
 "Abu Dhabi, United Arab Emirates" : "AUH",
 "Accra, Ghana" : "ACC",
