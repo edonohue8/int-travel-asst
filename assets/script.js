@@ -100,6 +100,17 @@ $("#search-btn").on("click", function () {
                 // Log the resulting object
                 console.log(response);
 
+                // var advisoryMessageDisplay = $("<h3>");
+                var advisoryMessage = response.data[twoLetterCountryCode].advisory.message
+
+                $("#travel-advisory").append(advisoryMessage)
+                console.log(advisoryMessage);
+
+                var advisorySource = response.data[twoLetterCountryCode].advisory.source
+                $("#advisory-url").append(advisorySource)
+                console.log(advisorySource);
+
+
             });
 
         //Travel Advisory Levels
