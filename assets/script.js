@@ -6,6 +6,9 @@ var date = new Date();
 var countryName = ''
 var twoLetterCountryCode = ''
 var settings = ''
+var newsURL = ''
+var newsArticle = ''
+const newsApiKey = "2941a03c379bfc4593a62285a938be82"
 
 // Set the departure date
 field.value = date.getFullYear().toString() + '-' + (date.getMonth() + 1).toString().padStart(2, 0) +
@@ -18,6 +21,12 @@ field2.value = date.getFullYear().toString() + '-' + (date.getMonth() + 1).toStr
 //obtain current date
 var currentDay = moment().format('YYYY-MM-DD');
 console.log(currentDay);
+
+function buildNewsURL() {
+    newsURL = "https://gnews.io/api/v4/search?q=" + countryName + "&lang=en&sortby=relevance&token=" + newsApiKey;
+console.log(newsURL);
+    return newsURL;
+};
 
 //search buttons
 $("#search-btn").on("click", function () {
@@ -66,8 +75,8 @@ $("#search-btn").on("click", function () {
         "headers": {
             "x-rapidapi-host": "skyscanner-skyscanner-flight-search-v1.p.rapidapi.com",
             "x-rapidapi-key": "e97df671fdmsh9c1e5a2b946b77fp11434djsn5f17923a2baa"
-        }
-    }
+        },
+    };
 
     $.ajax(settings).done(function (response) {
 
@@ -121,15 +130,33 @@ $("#search-btn").on("click", function () {
         //  3 Reconsider travel (orange)
         //  4 Do not travel (red)
 
-        const newsApiKey = "2941a03c379bfc4593a62285a938be82"
+    newsURL = buildNewsURL();
+            $.ajax({
+                url: newsURL,
+                method: "GET"
+            }).then(function (response) {
 
-        fetch("https://gnews.io/api/v4/search?q=" + countryName + "&lang=en&sortby=relevance&token=" + newsApiKey)
-            .then(function (response) {
-                return response.json();
-            })
-            .then(function (data) {
-                console.log(data);
+console.log(response);
+console.log(response.articles);
+
+                for (var i = 0; i < 5; i++) {
+                headline = (response.articles[i].title);
+                story = (response.articles[i].content);
+                picture = (response.articles[i].image);
+                caption = (response.articles[i].description)
+                storyDate = (response.articles[i].publishedAt);
+                storySource = (response.articles[i].source.name)
+console.log(headline);
+console.log(story);
+console.log(picture);
+console.log(caption);
+console.log(storyDate);
+console.log(storySource);
+                };
+
             });
+        });
+
             /*
         console.log(response);
 
@@ -143,19 +170,17 @@ $("#search-btn").on("click", function () {
         console.log(Object.values(destinationAirport)[0]);*/
 
     });
-});
 
+    window.onload = function(){
+        console.log("list of objects is", window.airports)
+        for(let airport in window.airports){
+            console.log(` ${airport} ==> ${airports[airport]}`)
+            $('#origins').append(`<option value="${airport}">`)
 
-window.onload = function(){
-    console.log("list of objects is", window.airports)
-    for(let airport in window.airports){
-        console.log(` ${airport} ==> ${airports[airport]}`)
-        $('#origins').append(`<option value="${airport}">`)
-       
-    } 
- 
-    for(let dairport in window.dairports){
-        $('#destinations').append(`<option value="${dairport}">`)
-    }
+        };
+
+        for(let dairport in window.dairports) {
+            $('#destinations').append(`<option value="${dairport}">`)
+        };
     //$('#origins')
-}
+    };
