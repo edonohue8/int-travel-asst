@@ -6,6 +6,8 @@ var date = new Date();
 var countryName = ''
 var twoLetterCountryCode = ''
 var settings = ''
+var flightQuote1 = ''
+var flightQuote2 = ''
 var newsURL = ''
 var newsArticle = ''
 const newsApiKey = "2941a03c379bfc4593a62285a938be82"
@@ -89,6 +91,13 @@ $("#search-btn").on("click", function () {
 
         console.log(countryName);
 
+        var flightQuote1 = response.Quotes[0].MinPrice;
+        $("#flight-quote1").append(flightQuote1)
+        console.log(flightQuote1);
+
+        var flightQuote2 = response.Quotes[1].MinPrice;
+        $("#flight-quote2").append(flightQuote2)
+        console.log(flightQuote2);
 
 
         //retrieve the 2-letter country code from the list
