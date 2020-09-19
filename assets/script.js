@@ -27,10 +27,12 @@ $("#search-btn").on("click", function () {
     var originLocation = $("#origin").val().trim();
     
     originLocation = window.airports[originLocation]
+    console.log("ORIGIN IS ", originLocation)
 
     console.log(originLocation);
     var destinationLocation = $("#dest-location").val().trim();
     destinationLocation = window.dairports[destinationLocation]
+    console.log("DESTINATION IS ", destinationLocation)
     console.log(destinationLocation);
 
     console.log(departureDate);
@@ -74,7 +76,7 @@ $("#search-btn").on("click", function () {
         //if response contains no data, display "No flights between origin and destination"
 
 
-        countryName = (response.Places[1].CountryName);
+        countryName = (response.Places[0].CountryName);
 
         console.log(countryName);
 
@@ -128,6 +130,7 @@ $("#search-btn").on("click", function () {
             .then(function (data) {
                 console.log(data);
             });
+            /*
         console.log(response);
 
         console.log(Object.keys(originAirport)[0]);
@@ -137,7 +140,7 @@ $("#search-btn").on("click", function () {
         console.log(Object.values(isoCountries)[0]);
 
         console.log(Object.keys(destinationAirport)[0]);
-        console.log(Object.values(destinationAirport)[0]);
+        console.log(Object.values(destinationAirport)[0]);*/
 
     });
 });
