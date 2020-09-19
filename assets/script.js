@@ -8,11 +8,11 @@ var twoLetterCountryCode = ''
 var settings = ''
 
 // Set the departure date
-field.value = date.getFullYear().toString() + '-' + (date.getMonth() + 1).toString().padStart(2, 0) + 
+field.value = date.getFullYear().toString() + '-' + (date.getMonth() + 1).toString().padStart(2, 0) +
     '-' + date.getDate().toString().padStart(2, 0);
 
 // Set the returning date
-field2.value = date.getFullYear().toString() + '-' + (date.getMonth() + 1).toString().padStart(2, 0) + 
+field2.value = date.getFullYear().toString() + '-' + (date.getMonth() + 1).toString().padStart(2, 0) +
     '-' + date.getDate().toString().padStart(2, 0);
 
 //obtain current date
@@ -25,14 +25,32 @@ $("#search-btn").on("click", function () {
     var departureDate = $("#departure").val();
     var returningDate = $("#returning").val();
     var originLocation = $("#origin").val().trim();
-console.log(originLocation);
+    console.log(originLocation);
     var destinationLocation = $("#dest-location").val().trim();
-console.log(destinationLocation);
+    console.log(destinationLocation);
 
-console.log(departureDate);
-console.log(returningDate);
+    console.log(departureDate);
+    console.log(returningDate);
 
-//skyscanner api call code
+    //Code for originAirport drop-down
+    let dropdown = $('#origin');
+
+    dropdown.empty();
+
+    dropdown.append('<option selected="true" disabled>Choose Country</option>');
+    dropdown.prop('selectedIndex', 0);
+
+    // Populate dropdown with originAirport list
+    // notes: getJSON not connecting with JQuery script
+    // notes: url needs to be connected to JSON file
+    // notes: entry needs to be corrected to pull from originAirports list also
+    $.getJSON(url, function (data) {
+        $.each(data, function (key, entry) {
+            dropdown.append($('<option></option>').attr('value', entry.airport).text(entry.name));
+        })
+    });
+
+    //skyscanner api call code
     settings = {
         "async": true,
         "crossDomain": true,
@@ -46,19 +64,19 @@ console.log(returningDate);
 
     $.ajax(settings).done(function (response) {
 
-console.log(response);
+        console.log(response);
 
-//if response contains no data, display "No flights between origin and destination"
+        //if response contains no data, display "No flights between origin and destination"
 
 
         countryName = (response.Places[1].CountryName);
 
-console.log(countryName);
+        console.log(countryName);
 
 
 
-    //retrieve the 2-letter country code from the list
-console.log(isoCountries[countryName]);
+        //retrieve the 2-letter country code from the list
+        console.log(isoCountries[countryName]);
 
         twoLetterCountryCode = isoCountries[countryName]
 
@@ -71,39 +89,39 @@ console.log(isoCountries[countryName]);
 
             .then(function (response) {
 
-// Log the travelAdvisoryURL
-console.log(travelAdvisoryURL);
+                // Log the travelAdvisoryURL
+                console.log(travelAdvisoryURL);
 
-// Log the resulting object
-console.log(response);
+                // Log the resulting object
+                console.log(response);
 
             });
 
-//Travel Advisory Levels
-//  1 Exercise normal precautions (dark blue)
-//  2 Exercise increased caution (yellow)
-//  3 Reconsider travel (orange)
-//  4 Do not travel (red)
+        //Travel Advisory Levels
+        //  1 Exercise normal precautions (dark blue)
+        //  2 Exercise increased caution (yellow)
+        //  3 Reconsider travel (orange)
+        //  4 Do not travel (red)
 
-    const newsApiKey = "2941a03c379bfc4593a62285a938be82"
+        const newsApiKey = "2941a03c379bfc4593a62285a938be82"
 
-    fetch("https://gnews.io/api/v4/search?q=" + countryName + "&lang=en&sortby=relevance&token=" + newsApiKey)
-        .then(function (response) {
-            return response.json();
-        })
-        .then(function (data) {
-console.log(data);
-        });
-console.log(response);
+        fetch("https://gnews.io/api/v4/search?q=" + countryName + "&lang=en&sortby=relevance&token=" + newsApiKey)
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (data) {
+                console.log(data);
+            });
+        console.log(response);
 
-console.log(Object.keys(originAirport)[0]);
-console.log(Object.values(originAirport)[0]);
+        console.log(Object.keys(originAirport)[0]);
+        console.log(Object.values(originAirport)[0]);
 
-console.log(Object.keys(isoCountries)[0]);
-console.log(Object.values(isoCountries)[0]);
+        console.log(Object.keys(isoCountries)[0]);
+        console.log(Object.values(isoCountries)[0]);
 
-console.log(Object.keys(destinationAirport)[0]);
-console.log(Object.values(destinationAirport)[0]);
+        console.log(Object.keys(destinationAirport)[0]);
+        console.log(Object.values(destinationAirport)[0]);
 
     });
 });
