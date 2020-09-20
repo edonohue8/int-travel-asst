@@ -90,7 +90,13 @@ $("#search-btn").on("click", function () {
         }
 
         //Country name from destination
-        countryName = (response.Places[1].CountryName);
+        if (response.Places[0].CountryName == twoLetterCountryCode) {
+            countryName = (response.Places[1].CountryName);
+            } else if (response.Places[1].CountryName == twoLetterCountryCode) {
+            countryName = (reponse.Places[0].CountryName);
+        };
+
+        // countryName = (response.Places[1].CountryName);
 
         console.log(countryName);
 
