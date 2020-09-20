@@ -84,21 +84,23 @@ $("#search-btn").on("click", function () {
 
         console.log(response);
 
-        //if response contains no data, display "No flights between origin and destination"
-        if (response.Places.length === 0 || response.Quotes.length === 0) {
+//if response contains no data, display "No flights between origin and destination"
+/*        if (response.Places.length === 0 || response.Quotes.length === 0) {
             return $("#travel-advisory").text("No flights between origin and destination at this time.")
-        }
+*/
 
-        //Country name from destination
-        if (response.Places[0].CountryName == twoLetterCountryCode) {
-            countryName = (response.Places[1].CountryName);
-            } else if (response.Places[1].CountryName == twoLetterCountryCode) {
-            countryName = (reponse.Places[0].CountryName);
+console.log(response.Places[0].CountryName);
+
+        countryName = (response.Places[0].CountryName);
+
+//Country name from destination
+        if (countryName == "United States") {
+            countryName = response.Places[1].CountryName;
+            } else {
+            countryName = response.Places[0].CountryName;
         };
 
-        // countryName = (response.Places[1].CountryName);
-
-        console.log(countryName);
+console.log(countryName);
 
         for (i = 0; i < response.Quotes.length; i++) {
             var usCurrency = new Intl.NumberFormat('en-US', {
@@ -108,7 +110,6 @@ $("#search-btn").on("click", function () {
 
             $("#flight-quote" + (i + 1)).append(usCurrency)
         }
-
 
         //retrieve the 2-letter country code from the list
         console.log(isoCountries[countryName]);
@@ -177,10 +178,12 @@ $("#search-btn").on("click", function () {
                 console.log(caption);
                 console.log(storyDate);
                 console.log(storySource);
-            };
-
+                };
+            });
         });
     });
+
+
 
     /*
 console.log(response);
@@ -194,7 +197,6 @@ console.log(Object.values(isoCountries)[0]);
 console.log(Object.keys(destinationAirport)[0]);
 console.log(Object.values(destinationAirport)[0]);*/
 
-});
 
 window.onload = function () {
     console.log("list of objects is", window.airports)
