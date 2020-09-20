@@ -86,9 +86,14 @@ $("#search-btn").on("click", function () {
 
 //if response contains no data, display "No flights between origin and destination"
         if (response.Places.length === 0 || response.Quotes.length === 0) {
+<<<<<<< HEAD
             return $("#travel-advisory").text("No flights between origin and destination at this time.")
         }
 
+=======
+            $("#travel-advisory").text("No flights between origin and destination at this time.")
+        }
+>>>>>>> e890d2aacbde9bb30ccfeef23f1b3197ba872212
 
 console.log(response.Places[0].CountryName);
 
