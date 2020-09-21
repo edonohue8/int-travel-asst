@@ -14,12 +14,16 @@ GIVEN I am looking for information on international travel locations
 
 WHEN I enter an origin, a destination, and travel dates
 
-THEN I am shown relevant flight information using the entered criteria, travel advisory information for the selected destination, and recent news for the selected destination.
+THEN I am shown 
 
-WHEN I 
+* relevant flight information using the entered criteria
 
-THEN 
+* travel advisory information for the selected destination
 
-WHEN I 
+*  recent news for the selected destination
 
-THEN 
+# SUBMISSION
+
+* The URL of the deployed application is 
+
+* The URL of the GitHub repository is 
