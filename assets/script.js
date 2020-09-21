@@ -1,11 +1,13 @@
 $(document).ready(function () {
     $("#departure").datepicker({
+        dateFormat: 'yy-mm-dd',
         minDate: 0
     });
 });
 
 $(document).ready(function () {
     $("#returning").datepicker({
+        dateFormat: 'yy-mm-dd',
         minDate: 0
     });
 });
