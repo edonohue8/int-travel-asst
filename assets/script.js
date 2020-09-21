@@ -1,3 +1,17 @@
+$(document).ready(function () {
+    $("#departure").datepicker({
+        minDate: 0
+    });
+});
+
+$(document).ready(function () {
+    $("#returning").datepicker({
+        minDate: 0
+    });
+});
+
+
+
 // Variables for setting departure and return date as current when starting user input
 var field = document.querySelector('#departure');
 var field2 = document.querySelector('#returning');
@@ -13,12 +27,17 @@ var newsArticle = ''
 const newsApiKey = "2941a03c379bfc4593a62285a938be82"
 
 // Set the departure date
-field.value = date.getFullYear().toString() + '-' + (date.getMonth() + 1).toString().padStart(2, 0) +
-    '-' + date.getDate().toString().padStart(2, 0);
+// field.value = date.getFullYear().toString() + '-' + (date.getMonth() + 1).toString().padStart(2, 0) +
+//     '-' + date.getDate().toString().padStart(2, 0);
 
 // Set the returning date
-field2.value = date.getFullYear().toString() + '-' + (date.getMonth() + 1).toString().padStart(2, 0) +
-    '-' + date.getDate().toString().padStart(2, 0);
+// field2.value = date.getFullYear().toString() + '-' + (date.getMonth() + 1).toString().padStart(2, 0) +
+//     '-' + date.getDate().toString().padStart(2, 0);
+
+
+
+
+
 
 //obtain current date
 var currentDay = moment().format('YYYY-MM-DD');
