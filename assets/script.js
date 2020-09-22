@@ -119,7 +119,7 @@ console.log(countryName);
                 currency: 'USD'
             }).format(response.Quotes[i].MinPrice);
 
-            $("#flight-quote" + (i + 1)).append("Option" + (i+1) + ": " + usCurrency)
+            $("#flight-quote" + (i + 1)).append("Option " + (i+1) + ": " + usCurrency)
         }
 
         //retrieve the 2-letter country code from the list
