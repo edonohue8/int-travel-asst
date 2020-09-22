@@ -165,7 +165,7 @@ console.log(countryName);
 
             });
 
-
+        var     
         newsURL = buildNewsURL();
         $.ajax({
             url: newsURL,
@@ -179,15 +179,30 @@ console.log(countryName);
                 headline = (response.articles[i].title);
                 story = (response.articles[i].content);
                 picture = (response.articles[i].image);
-                caption = (response.articles[i].description)
+                caption = (response.articles[i].description);
                 storyDate = (response.articles[i].publishedAt);
-                storySource = (response.articles[i].source.name)
+                articleURL = (response.articles[i].url);
+                storySource = (response.articles[i].source.name);
                 console.log(headline);
                 console.log(story);
                 console.log(picture);
                 console.log(caption);
                 console.log(storyDate);
                 console.log(storySource);
+                
+                if (i==0){
+                    headline.innerHTML = headline;
+                    story.innerHTML = picture;
+                    storyDate1.innerHTML = storyDate;
+                    if (i == 0) {
+                        headline1.innerHTML = headline;
+                        //picture1.innerHTML = "<img src=" + picture + ">";
+                        story1.innerHTML = story;
+                        caption1.innerHTML = caption;
+                        storyDate1.innerHTML = storyDate;
+                        articleURL1.innerHTML = articleURL;
+                    }   
+                };
                 };
             });
         });
