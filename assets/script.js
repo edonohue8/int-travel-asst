@@ -151,16 +151,16 @@ console.log(response);
                 //  4 Do not travel (red)
 
                 if (advisoryScore >= 4.5 && advisoryScore <= 5) {
-                    $("#travel-advisory").css({ backgroundColor: "red" })
+                    $("#travel-advisory").css({ backgroundColor: "red", color: "white" })
                 }
                 if (advisoryScore >= 3.5 && advisoryScore <= 4.4) {
-                    $("#travel-advisory").css({ backgroundColor: "yellow" })
+                    $("#travel-advisory").css({ backgroundColor: "orange", color: "black" })
                 }
                 if (advisoryScore >= 2.5 && advisoryScore <= 3.4) {
-                    $("#travel-advisory").css({ backgroundColor: "#00f1ff" })
+                    $("#travel-advisory").css({ backgroundColor: "yellow", color: "black" })
                 }
                 if (advisoryScore >= 0 && advisoryScore <= 2.4) {
-                    $("#travel-advisory").css({ backgroundColor: "#00ff80" })
+                    $("#travel-advisory").css({ backgroundColor: "darkblue", color: "white" })
                 }
 
                 $("#travel-advisory").append(advisoryMessage)
