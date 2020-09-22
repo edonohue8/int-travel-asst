@@ -171,6 +171,10 @@ console.log(advisoryMessage);
 console.log(advisorySource);
             });
 
+<<<<<<< HEAD
+        var     
+=======
+>>>>>>> c81092ca698ef73e9be809bc6e22713564aa769c
         newsURL = buildNewsURL();
         $.ajax({
             url: newsURL,
@@ -184,8 +188,32 @@ console.log(advisorySource);
                 headline = (response.articles[i].title);
                 story = (response.articles[i].content);
                 picture = (response.articles[i].image);
-                caption = (response.articles[i].description)
+                caption = (response.articles[i].description);
                 storyDate = (response.articles[i].publishedAt);
+<<<<<<< HEAD
+                articleURL = (response.articles[i].url);
+                storySource = (response.articles[i].source.name);
+                console.log(headline);
+                console.log(story);
+                console.log(picture);
+                console.log(caption);
+                console.log(storyDate);
+                console.log(storySource);
+                
+                if (i==0){
+                    headline.innerHTML = headline;
+                    story.innerHTML = picture;
+                    storyDate1.innerHTML = storyDate;
+                    if (i == 0) {
+                        headline1.innerHTML = headline;
+                        //picture1.innerHTML = "<img src=" + picture + ">";
+                        story1.innerHTML = story;
+                        caption1.innerHTML = caption;
+                        storyDate1.innerHTML = storyDate;
+                        articleURL1.innerHTML = articleURL;
+                    }   
+                };
+=======
                 storySource = (response.articles[i].source.name)
 console.log(headline);
 console.log(story);
@@ -229,6 +257,7 @@ console.log(storySource);
                         storyDate5.innerHTML = storyDate;
                         storySource5.innerHTML = storySource;
                     } 
+>>>>>>> c81092ca698ef73e9be809bc6e22713564aa769c
                 };
             });
         });
