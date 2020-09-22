@@ -171,10 +171,7 @@ console.log(advisoryMessage);
 console.log(advisorySource);
             });
 
-<<<<<<< HEAD
         var     
-=======
->>>>>>> c81092ca698ef73e9be809bc6e22713564aa769c
         newsURL = buildNewsURL();
         $.ajax({
             url: newsURL,
@@ -190,7 +187,6 @@ console.log(advisorySource);
                 picture = (response.articles[i].image);
                 caption = (response.articles[i].description);
                 storyDate = (response.articles[i].publishedAt);
-<<<<<<< HEAD
                 articleURL = (response.articles[i].url);
                 storySource = (response.articles[i].source.name);
                 console.log(headline);
@@ -213,7 +209,6 @@ console.log(advisorySource);
                         articleURL1.innerHTML = articleURL;
                     }   
                 };
-=======
                 storySource = (response.articles[i].source.name)
 console.log(headline);
 console.log(story);
@@ -257,7 +252,6 @@ console.log(storySource);
                         storyDate5.innerHTML = storyDate;
                         storySource5.innerHTML = storySource;
                     } 
->>>>>>> c81092ca698ef73e9be809bc6e22713564aa769c
                 };
             });
         });
