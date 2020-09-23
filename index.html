@@ -64,7 +64,11 @@
                     <article class="tile is-child notification is-success">
                         <div class="content">
                             <p class="title">About the App</p>
-                            <p class="subtitle">Content</p>
+                            <p class="subtitle" id="happyTravels">This website is designed to prepare airline travelers in proximity to major US
+                                airport hubs for upcoming international trips. After entering all of your pre-flight
+                                information (i.e. dates, origin, and destination), you will be presented with travel
+                                advisory information, flight quotes, and news.</p>
+                            <p class="subtitle">Happy travels!</p>
                             <div class="content">
 
                             </div>
@@ -75,19 +79,11 @@
     </section>
     <!--Search Buttons tile-->
     <section class="section">
-<<<<<<< HEAD
-        <div class="container">
-            <div class="tile is-parent is-8 box">
-                <div class="tile is-child">
-                    <button id="search-btn">Search</button>
-                    <button id="clear-btn" onclick="location.reload();" value="Reset form">Clear Results</button>
-=======
         <div class="container" id="buttons">
             <div class="tile is-parent is-8">
                 <div class="tile is-child" class="center" id="buttonsbox">
                     <button id="search-btn">Search</button>
-                    <button id="clear-btn" onclick="location.reload();" value="Reset form">Clear Results</button> 
->>>>>>> c81092ca698ef73e9be809bc6e22713564aa769c
+                    <button id="clear-btn" onclick="location.reload();" value="Reset form">Clear Results</button>
                 </div>
             </div>
         </div>
@@ -102,13 +98,9 @@
                 <div class="tile is-child box" class="content">
                     <span class="card-title">Travel Advisory:</span>
                     <p id="travel-advisory"></p>
-<<<<<<< HEAD
-                    <p id="advisory-url"></p>
-=======
                     <hr>
                     <span class="card-title">Link to Travel Advisory:</span>
                     <p id="advisory-url"> </p>
->>>>>>> c81092ca698ef73e9be809bc6e22713564aa769c
                 </div>
             </div>
         </div>
@@ -120,28 +112,63 @@
             <div class="tile is-ancestor">
                 <div class="tile is-parent">
                     <div class="tile is-child is-half box">
-<<<<<<< HEAD
-                        <p id="flight-quote1">First option</p>
-                        <p id="flight-quote2">Second option</p>
-=======
                         <span class="card-title">Flight Quote:</span>
                         <p id="flight-quote1"></p>
                         <p id="flight-quote2"></p>
->>>>>>> c81092ca698ef73e9be809bc6e22713564aa769c
                     </div>
                     <div class="tile is-child is-half box">
                         <div class="item4">
-                            <p>News About Your Destination</p>
+                            <p class="newsHeadline">News About Your Destination</p><br>
                             <div id="forecast">
                                 <div class="nested">
-                                    <div id="day1">
-                                        <p id="headline1"></p>
-                                        <p id="picture1"></p>
-                                        <p id="story1"></p>
-                                        <p id="caption1"></p>
-                                        <p id="storyDate1"></p>
+                                    <div id="news1">
+                                        <p id="headline1" class="headline"></p>
+                                        <!-- <p id="picture1"></p> -->
+                                        <!-- <p id="story1"></p> -->
+                                        <p id="storyDate1"></p><br>
+                                        <p id="caption1"></p><br>
                                         <p id="storySource1"></p>
                                         <p id="articleURL1"></p>
+                                    </div>
+                                    <br>
+                                    <div id="news2">
+                                        <p id="headline2" class="headline"></p>
+                                        <!-- <p id="picture1"></p> -->
+                                        <!-- <p id="story1"></p> -->
+                                        <p id="storyDate2"></p><br>
+                                        <p id="caption2"></p><br>
+                                        <p id="storySource2"></p>
+                                        <p id="articleURL2"></p>
+                                    </div>
+                                    <br>
+                                    <div id="news3">
+                                        <p id="headline3" class="headline"></p>
+                                        <!-- <p id="picture1"></p> -->
+                                        <!-- <p id="story1"></p> -->
+                                        <p id="storyDate3"></p><br>
+                                        <p id="caption3"></p><br>
+                                        <p id="storySource3"></p>
+                                        <p id="articleURL3"></p>
+                                    </div>
+                                    <br>
+                                    <div id="news4">
+                                        <p id="headline4" class="headline"></p>
+                                        <!-- <p id="picture1"></p> -->
+                                        <!-- <p id="story1"></p> -->
+                                        <p id="storyDate4"></p><br>
+                                        <p id="caption4"></p><br>
+                                        <p id="storySource4"></p>
+                                        <p id="articleURL4"></p>
+                                    </div>
+                                    <br>
+                                    <div id="news5">
+                                        <p id="headline5" class="headline"></p>
+                                        <!-- <p id="picture1"></p> -->
+                                        <!-- <p id="story1"></p> -->
+                                        <p id="storyDate5"></p><br>
+                                        <p id="caption5"></p><br>
+                                        <p id="storySource5"></p>
+                                        <p id="articleURL5"></p>
                                     </div>
                                 </div>
                             </div>
@@ -160,42 +187,3 @@
 </body>
 
 </html>
-
-
-<div class="item4">
-    <p>5-Day Forecast</p>
-    <div id="forecast">
-        <div class="nested">
-            <div id="day1">
-                <p id="date1"></p>
-                <p id="icon1"></p>
-                <p id="temp1"></p>
-                <p id="humidity1"></p>
-            </div>
-            <div id="day2">
-                <p id="date2"></p>
-                <p id="icon2"></p>
-                <p id="temp2"></p>
-                <p id="humidity2"></p>
-            </div>
-            <div id="day3">
-                <p id="date3"></p>
-                <p id="icon3"></p>
-                <p id="temp3"></p>
-                <p id="humidity3"></p>
-            </div>
-            <div id="day4">
-                <p id="date4"></p>
-                <p id="icon4"></p>
-                <p id="temp4"></p>
-                <p id="humidity4"></p>
-            </div>
-            <div id="day5">
-                <p id="date5"></p>
-                <p id="icon5"></p>
-                <p id="temp5"></p>
-                <p id="humidity5"></p>
-            </div>
-        </div>
-    </div>
-</div>
