@@ -15,7 +15,7 @@
 
 <body>
     <!--Hero Title and Logo-->
-    <section class="hero is-primary" img src=>
+    <section class="hero is-primary is-bold is-small" img src=>
         <div class="hero-body">
             <div class="container">
                 <figure class="image is-3by1">
@@ -35,33 +35,50 @@
     <section class="section">
         <div class="container">
             <div class="tile is-ancestor">
-                <div class="tile is-6 is-parent">
-                    <div class="tile is-child">
-                        <label>Departure Date</label>
-                        <input id="departure" type="text" autocomplete="off">
-                    </div>
-
-                    <div class="tile is-child">
-                        <label>Return Date</label>
-                        <input id="returning" type="text" autocomplete="off">
-                    </div>
-                </div>
-                <div class="tile is-parent is-vertical">
-                    <div class="tile is-child">
-                        <label>Origin Location</label>
-                        <input list="origins" id="origin">
-                        <datalist id="origins"></datalist>
-                    </div>
-
-                    <div class="tile is-child">
-                        <label>Destination</label>
-                        <input list="destinations" id="dest-location">
-                        <datalist id="destinations"></datalist>
-                    </div>
-                </div>
                 <!--Info tile-->
-                <div class="tile is-parent">
-                    <article class="tile is-child notification is-success">
+                <article class="tile is-parent notification is-success">
+                    <div class="content">
+                        <p class="title">About the App</p>
+                        <p class="subtitle" id="happyTravels">This website is designed to prepare airline travelers in
+                            proximity to major US
+                            airport hubs for upcoming international trips. After entering all of your pre-flight
+                            information (i.e. dates, origin, and destination), you will be presented with travel
+                            advisory information, flight quotes, and news.</p>
+                        <p class="subtitle">Happy travels!</p>
+                        <div class="content">
+
+                        </div>
+                    </div>
+            </div>
+        </div>
+        </div>
+        <div class="tile is-parent">
+            <div class="tile is-child is-3">
+                <label>Departure Date</label>
+                <input id="departure" type="text" autocomplete="off">
+            </div>
+
+            <div class="tile is-child is-8">
+                <label>Return Date</label>
+                <input id="returning" type="text" autocomplete="off">
+            </div>
+        </div>
+        <div class="tile is-parent is-8">
+            <div class="tile is-child">
+                <label>Origin Location</label>
+                <input list="origins" id="origin">
+                <datalist id="origins"></datalist>
+            </div>
+
+            <div class="tile is-child is-8">
+                <label>Destination</label>
+                <input list="destinations" id="dest-location">
+                <datalist id="destinations"></datalist>
+            </div>
+        </div>
+        <!--Info tile
+                <div class="tile is-parent box">
+                    <article class="tile is-child notification is-success ">
                         <div class="content">
                             <p class="title">About the App</p>
                             <p class="subtitle" id="happyTravels">This website is designed to prepare airline travelers in proximity to major US
@@ -75,15 +92,17 @@
                         </div>
                 </div>
             </div>
-        </div>
+        </div>-->
     </section>
     <!--Search Buttons tile-->
     <section class="section">
         <div class="container" id="buttons">
             <div class="tile is-parent is-8">
                 <div class="tile is-child" class="center" id="buttonsbox">
-                    <button id="search-btn">Search</button>
-                    <button id="clear-btn" onclick="location.reload();" value="Reset form">Clear Results</button> 
+                    <button id="search-btn" class="button is-primary">Search</button>
+                    <br>
+                    <button id="clear-btn" class="button is-primary is-outlined" onclick="location.reload();"
+                        value="Reset form">Clear Results</button>
                 </div>
             </div>
         </div>
