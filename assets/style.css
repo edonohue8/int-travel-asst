@@ -21,3 +21,24 @@
 .card-title {
     font-weight: bold;
 }
+
+/* About section */
+/* #happyTravels {
+    text-align: justify;
+    
+} */
+
+/* styling for news section */
+
+.newsHeadline {
+    font-size: 25px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.headline {
+    font-size: 17px;
+    font-weight: bold;
+}
