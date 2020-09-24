@@ -40,7 +40,7 @@ For our styling/css framework, our group used Bulma.  It was utilized to organiz
 
 ## API References
 
-* Flight information - Skyscanner (https://skyscanner.github.io/slate/)
+* Flight information - Skyscanner via RapidAPI (https://rapidapi.com/skyscanner/api/skyscanner-flight-search/details)
 * Travel Advisory - travel-advisory.info (https://www.travel-advisory.info/data-api)
 * News - GNews (https://gnews.io/docs/v3#introduction)
 
@@ -48,7 +48,7 @@ For our styling/css framework, our group used Bulma.  It was utilized to organiz
 
 * HTML
 * CSS (framework - Bulma)
-* Javascript
+* Javascript (including jQuery)
 
 # Submission
 
