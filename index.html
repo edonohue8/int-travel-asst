@@ -10,12 +10,11 @@
 
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-
 </head>
 
 <body>
-    <!--Hero Title and Logo-->
-    <section class="hero is-primary is-bold is-small" img src=>
+<!--Hero Title and Logo-->
+    <section class="hero is-primary is-bold is-small">
         <div class="hero-body">
             <div class="container">
                 <figure class="image is-3by1">
@@ -24,98 +23,64 @@
                 <h1 class="title" align="center" height=150px>
                     Safety First Travel
                 </h1>
-
                 <h2 class="subtitle" align="center">
                     Your First Step to Your Perfect Trip
                 </h2>
             </div>
         </div>
     </section>
-    <!--First section of tiles-->
+<!--First section of tiles-->
     <section class="section">
         <div class="container">
             <div class="tile is-ancestor">
-                <!--Info tile-->
+<!--Info tile-->
                 <article class="tile is-parent notification is-success">
                     <div class="content">
                         <p class="title">About the App</p>
-                        <p class="subtitle" id="happyTravels">This website is designed to prepare airline travelers in
-                            proximity to major US
-                            airport hubs for upcoming international trips. After entering all of your pre-flight
-                            information (i.e. dates, origin, and destination), you will be presented with travel
-                            advisory information, flight quotes, and news.</p>
-                        <p class="subtitle">Happy travels!</p>
-                        <div class="content">
-
-                        </div>
+                        <p class="subtitle" id="happyTravels">This website is designed to prepare airline travelers in proximity to major US airport hubs for upcoming international trips. After entering all of your pre-flight information (i.e., dates, origin, and destination), you will be presented with travel advisory information, flight quotes, and news.</p>
+                        <p class="subtitle">Happy Travels!</p>
+                        <div class="content"></div>
                     </div>
+                </article>
             </div>
         </div>
-        </div>
-
         <br>
         <div class="container">
-        <div class="tile is-parent">
-            <div class="tile is-child is-3">
-                <label>Departure Date</label>
-                <input id="departure" type="text" autocomplete="off">
-            </div>
-
-            <div class="tile is-child is-8">
-                <label>Return Date</label>
-                <input id="returning" type="text" autocomplete="off">
-            </div>
-        </div>
-        <div class="tile is-parent is-8">
-            <div class="tile is-child">
-                <label>Origin Location</label>
-                <input list="origins" id="origin">
-                <datalist id="origins"></datalist>
-            </div>
-
-            <div class="tile is-child is-8">
-                <label>Destination</label>
-                <input list="destinations" id="dest-location">
-                <datalist id="destinations"></datalist>
-            </div>
-        </div>
-    </div>
-        <!--Info tile
-                <div class="tile is-parent box">
-                    <article class="tile is-child notification is-success ">
-                        <div class="content">
-                            <p class="title">About the App</p>
-                            <p class="subtitle" id="happyTravels">This website is designed to prepare airline travelers in proximity to major US
-                                airport hubs for upcoming international trips. After entering all of your pre-flight
-                                information (i.e. dates, origin, and destination), you will be presented with travel
-                                advisory information, flight quotes, and news.</p>
-                            <p class="subtitle">Happy travels!</p>
-                            <div class="content">
-
-                            </div>
-                        </div>
+            <div class="tile is-parent">
+                <div class="tile is-child" align="left">
+                    <label>Departure Date</label>
+                    <input id="departure" type="text" autocomplete="off">
+                </div>
+                <div class="tile is-child" align="right">
+                    <label>Return Date</label>
+                    <input id="returning" type="text" autocomplete="off">
                 </div>
             </div>
-        </div>-->
-    </section>
-    <!--Search Buttons tile-->
-    <section class="section">
+            <div class="tile is-parent">
+                <div class="tile is-child" align="left">
+                    <label>Origin (USA)</label>
+                    <input list="origins" id="origin">
+                    <datalist id="origins"></datalist>
+                </div>
+                <div class="tile is-child" align="right">
+                    <label>Destination</label>
+                    <input list="destinations" id="dest-location">
+                    <datalist id="destinations"></datalist>
+                </div>
+            </div>
+        </div>
+<!--Search Buttons tile-->
+    <!--<section class="section">-->
         <div class="container" id="buttons">
-            <div class="tile is-parent is-8">
+            <div class="tile is-parent is-12">
                 <div class="tile is-child" class="center" id="buttonsbox">
                     <button id="search-btn" class="button is-primary">Search</button>
-                    <br>
                     <button id="clear-btn" class="button is-primary is-outlined" onclick="location.reload();"
                         value="Reset form">Clear Results</button>
                 </div>
             </div>
         </div>
-        </div>
-        <br>
-        <br>
-    </section>
     <!--Travel tile-->
-    <section class="section">
         <div class="container">
             <div class="tile is-full is-parent">
                 <div class="tile is-child is-half box" class="content">
@@ -132,22 +97,19 @@
                 </div>
             </div>
         </div>
-
     </section>
-    <!--Flight and News tile-->
+<!--Flight and News tile-->
     <section class="section">
         <div class="container">
             <div class="tile is-ancestor">
                 <div class="tile is-parent">
                     <div class="tile is-child is-half box">
                         <div class="item4">
-                            <p class="newsHeadline">Current News About Your Destination</p><br>
+                            <p class="newsHeadline" align="center">Current News<br>About Your Destination</p><br>
                             <div id="forecast">
                                 <div class="nested">
                                     <div id="news1">
                                         <p id="headline1" class="headline"></p>
-                                        <!-- <p id="picture1"></p> -->
-                                        <!-- <p id="story1"></p> -->
                                         <p id="storyDate1"></p><br>
                                         <p id="caption1"></p><br>
                                         <p id="storySource1"></p>
@@ -156,8 +118,6 @@
                                     <br>
                                     <div id="news2">
                                         <p id="headline2" class="headline"></p>
-                                        <!-- <p id="picture1"></p> -->
-                                        <!-- <p id="story1"></p> -->
                                         <p id="storyDate2"></p><br>
                                         <p id="caption2"></p><br>
                                         <p id="storySource2"></p>
@@ -166,8 +126,6 @@
                                     <br>
                                     <div id="news3">
                                         <p id="headline3" class="headline"></p>
-                                        <!-- <p id="picture1"></p> -->
-                                        <!-- <p id="story1"></p> -->
                                         <p id="storyDate3"></p><br>
                                         <p id="caption3"></p><br>
                                         <p id="storySource3"></p>
@@ -176,8 +134,6 @@
                                     <br>
                                     <div id="news4">
                                         <p id="headline4" class="headline"></p>
-                                        <!-- <p id="picture1"></p> -->
-                                        <!-- <p id="story1"></p> -->
                                         <p id="storyDate4"></p><br>
                                         <p id="caption4"></p><br>
                                         <p id="storySource4"></p>
@@ -186,8 +142,6 @@
                                     <br>
                                     <div id="news5">
                                         <p id="headline5" class="headline"></p>
-                                        <!-- <p id="picture1"></p> -->
-                                        <!-- <p id="story1"></p> -->
                                         <p id="storyDate5"></p><br>
                                         <p id="caption5"></p><br>
                                         <p id="storySource5"></p>
@@ -196,16 +150,16 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
     <script src="assets/countryCodes.js"></script>
     <script src="assets/originAirports.js"></script>
     <script src="assets/destinationAirports.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-
-    <!-- JQuery script for drop-down -->
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
-
     <script src="assets/script.js"></script>
 </body>
 
