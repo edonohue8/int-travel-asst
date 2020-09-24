@@ -48,17 +48,17 @@ For our styling/css framework, our group used Bulma.  It was utilized to organiz
 
 * HTML
 * CSS (framework - Bulma)
-* Javascript (including jQuery)
+* Javascript (including jQuery/jQuery UI)
 
 # Submission
 
 * The URL of the deployed application is https://edonohue8.github.io/project-1/
 
-* The URL of the GitHub repository is https://github.com/edonohue8/project-1/tree/add-html-skeleton
+* The URL of the GitHub repository is https://github.com/edonohue8/project-1
 
 ## Screenshot of Website Page
 
-<img src="index.png" width="600">
+<img src="index.gif" width="600">
 
 ## Authors
 
