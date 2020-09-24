@@ -58,7 +58,7 @@ For our styling/css framework, our group used Bulma.  It was utilized to organiz
 
 ## Screenshot of Website Page
 
-<img src="index.png" width="600">
+<img src="index.gif" width="600">
 
 ## Authors
 
